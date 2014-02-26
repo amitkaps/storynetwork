@@ -1,7 +1,13 @@
 .brand {
-	font-family: 'Kaushan Script', cursive;
+	font-family: 'Kaushan Script', serif;
 	font-size: 4rem;
 	line-height: 4rem;
+}
+
+.tagline {
+	font-size: 2rem;
+	line-height: 2rem;
+	padding-top: 2rem;
 }
 
 h1, h2, h3, h4 {

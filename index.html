@@ -11,7 +11,6 @@
 	
     <!--  CSS  	-->
 	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
-	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
 	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
 	<link type="text/css" rel="stylesheet" href="main.css" />  
 </head>
@@ -21,6 +20,7 @@
 	<header>
 	<div class="container">
 		<h1 class="brand"> Indian Storytelling Network </h1>
+		<h4 class="tagline">Building a community of storytellers across India</h4>
 
 		<nav class="navbar navbar-static-top  navbar-inverse" role="navigation">
 		
@@ -56,7 +56,7 @@
 
 		<div class="row search">
 			<div class="col-md-12">
-				<h3>Search for Storytellers</h3>
+				<h4>Search for Storytellers</h4>
 				<input class="form-control input-lg" placeholder="Type here to search and narrow down by name, city or text" type="text" ng-model="search.$">
 			</div>
 		</div>
@@ -68,9 +68,9 @@
 				<div class="card">
 					<h3> {{ member.name }} </h3>
 					<h4> <a href="{{ member.website }}"> {{ member.organization }} </a> </h4>
-					<span> <i class="fa fa-phone"></i> {{ member.phone}} <span> <br>
-					<span> <i class="fa fa-envelope-o"> </i> <a href="mailto:{{ member.email }}?subject=Connecting thru Indian Storytelling Network">{{ member.email }}</a> </span> <br>
-					<span> <i class="fa fa-location-arrow"> </i> {{ member.location }} </span> <br>
+					<span class="glyphicon glyphicon-earphone"> </span> {{ member.phone}} <br>
+					<span class="glyphicon glyphicon-envelope"> </span> <a href="mailto:{{ member.email }}?subject=Connecting thru Indian Storytelling Network">{{ member.email }}</a> <br>
+					<span class="glyphicon glyphicon-map-marker"> </span> {{ member.location }} <br>
 					<p> <button type="button" class="pull-right btn btn-link btn-xs" data-toggle="collapse" data-target="#person{{ member.id }}" > Read more </button> </p>
 					<div id="person{{ member.id }}" class="collapse">
 						<small> {{ member.details }} </small>
@@ -150,8 +150,8 @@
 					<strong>Ms. Geeta Ramanujam </strong><br>
 					Kathalaya, Bangalore<br>
 					<a href="http://www.kathalaya.org/">www.kathalaya.org</a><br>
-					<i class="fa fa-phone"></i> 080 2668 9856<br>
-					<i class="fa fa-envelope-o"></i> <a href="mailto:kathalaya@gmail.com?subject=Indian_Storytelling_Network">kathalaya@gmail.com</a></br>
+					<span class="glyphicon glyphicon-earphone"></span> 080 2668 9856<br>
+					<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:kathalaya@gmail.com?subject=Indian_Storytelling_Network">kathalaya@gmail.com</a></br>
 				</address>
 			</div>
 
@@ -160,8 +160,8 @@
 					<strong>Dr. Eric Miller</strong><br>
 					World Storytelling Institute, Chennai<br>
 					<a href="http://www.storytellinginstitute.org/">www.storytellinginstitute.org</a><br>
-					<i class="fa fa-phone"></i> 98403 94282<br>
-					<i class="fa fa-envelope-o"></i> <a href="mailto:info@storytellinginstitute.org?subject=Indian_Storytelling_Network">info@storytellinginstitute.org</a><br>
+					<span class="glyphicon glyphicon-earphone"></span>  98403 94282<br>
+					<span class="glyphicon glyphicon-envelope"></span> <a href="mailto:info@storytellinginstitute.org?subject=Indian_Storytelling_Network">info@storytellinginstitute.org</a><br>
 				</address>
 			</div>
 			</div>
