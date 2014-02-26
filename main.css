@@ -1,0 +1,71 @@
+.brand {
+	font-family: 'Kaushan Script', cursive;
+	font-size: 4rem;
+	line-height: 4rem;
+}
+
+h1, h2, h3, h4 {
+	text-align: center;
+}
+
+header, footer{
+  background-color: #222222;
+  color: #ddd;
+}
+
+.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+footer{
+  background-color: #222222;
+  color: #ddd;
+  padding: 2rem 0 2rem 0;
+  text-align: center;
+}
+
+.navbar-inverse {
+	border-color: #222222;
+}
+
+#about, #contact, #listing {
+	background-color: whitesmoke;
+	background-image: url('geometry.png')
+}
+
+#search{
+	background-image: url('old_map.png');
+}
+
+.search, .grid {
+	padding-top: 10px;
+}
+
+section {
+	padding: 2em 0 2em 0;
+}
+
+
+.container {
+	max-width: 960px;
+	margin: 10 auto;
+}
+
+.container-large {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.card {
+	min-width: 150px;
+	min-height: 250px;
+	background-color: rgba(255, 255, 224, 0.8);
+	padding: 10px;
+	margin: 7px 2px 7px 2px;
+}
+
+@media (min-width: 600px) {
+  .card {
+  	min-height: 210px;
+  } 
+}

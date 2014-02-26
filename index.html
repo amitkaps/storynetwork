@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="Indian Storytelling Network">
+	<meta name="author" content="Amit Kapoor">
+		
+	<title>Indian Storytelling Network</title>
+	
+    <!--  CSS  	-->
+	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="main.css" />  
+</head>
+
+<body ng-app="IsnApp">
+
+	<header>
+	<div class="container">
+		<h1 class="brand"> Indian Storytelling Network </h1>
+
+		<nav class="navbar navbar-static-top  navbar-inverse" role="navigation">
+		
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#isn-navbar">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		    </div>
+
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="isn-navbar">
+		      <ul class="nav navbar-nav nav-justified">
+		        <li><a href="#search">Search</a></li>
+			  	<li><a href="#about">About</a></li>
+			  	<li><a href="#listing">Listing</a></li>
+			  	<li><a href="#contact">Contact</a></li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+
+	</div>
+	</header>
+
+
+	<section id="search" ng-controller="MainController"> 
+	<div class="container">
+
+		<div class="row search">
+			<div class="col-md-12">
+				<h3>Search for Storytellers</h3>
+				<input class="form-control input-lg" placeholder="Type here to search and narrow down by name, city or text" type="text" ng-model="search.$">
+			</div>
+		</div>
+	</div>
+
+	<div class="container"> 
+		<div class="row grid">
+			<div class="col-xs-6 col-sm-4 col-md-4" ng-repeat="member in members.details | orderBy:'name' | filter:search">
+				<div class="card">
+					<h3> {{ member.name }} </h3>
+					<h4> <a href="{{ member.website }}"> {{ member.organization }} </a> </h4>
+					<span> <i class="fa fa-phone"></i> {{ member.phone}} <span> <br>
+					<span> <i class="fa fa-envelope-o"> </i> <a href="mailto:{{ member.email }}?subject=Connecting thru Indian Storytelling Network">{{ member.email }}</a> </span> <br>
+					<span> <i class="fa fa-location-arrow"> </i> {{ member.location }} </span> <br>
+					<p> <button type="button" class="pull-right btn btn-link btn-xs" data-toggle="collapse" data-target="#person{{ member.id }}" > Read more </button> </p>
+					<div id="person{{ member.id }}" class="collapse">
+						<small> {{ member.details }} </small>
+					</div>
+						
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+
+
+
+	<section id="about">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-12">
+			<h2> About ISN </h2>
+			<p> The Indian Storytelling Network was founded in Dec 2011 by Geeta Ramanujam (director of <a href="http://www.kathalaya.org/">Kathalaya</a> and its <a href="http://www.kathalaya.org/academy_of_storytelling.html">Academy of Storytelling</a>, in Bangalore); and Eric Miller (director of the <a href="http://www.storytellinginstitute.org/">World Storytelling Institute</a> and <a href="http://www.storytellinginstitute.org/#5">Chennai Storytelling Associaton</a>, in Chennai). Actually, ISN is Geeta's idea, and Eric is assisting: in this way, they are co-facilitating the ISN. </p>
+
+			<p> The ISN is inspired by the <a href="http://www.cuentacuentos.eu/">International Storytelling Network</a> (based in Spain), the <a href="http://www.storynet.org/">USA National Storytelling Network</a>, and other Storytelling Organisations around the world. The founding of the ISN might mark the coming-of-age in India of the global Storytelling Revival, which began in the late '60s in places such as the USA. </p>
+
+			<p> The Indian Storytelling Network builds upon India's myriad splendid ancient Storytelling traditions and uses it in the context of Education, Therapy, Coaching and Communication. Aspects of the mission of the Indian Storytelling Network include:</p>
+			<ul>	
+				<li> Letting members of the public know what Storytellers in what locations are available as performers and trainers. </li>
+				<li> Enabling the Storytellers to network amongst themselves.</li>
+			    <li> Facilitating Festivals and Conferences.</li>
+			    <li>Communicating with other Storytelling Organisations around the World.</li>
+			    <li> Developing ways of using Stories and Storytelling for Education, including as parts of school Curriculums. The ISN aspires to be a resource for Educators. </li>
+				<li>Developing ways of using Stories and Storytelling for Therapy (Psychological healing). It is time for Storytelling Therapy to take its place alongside Drama Therapy, Dance Therapy, Music Therapy, Art Therapy, and Play Therapy.</li>
+				<li>Developing ways of using Stories and Storytelling for Coaching</li> 
+				<li> Conducting research regarding forms of traditional Storytelling in India; documenting these traditions, supporting continuations and modernisations of these traditions, and presenting all of this to the public. </li>
+				<li>Exploring ways of telling traditional Indian stories to members of the contemporary Indian public -- in the Vernacular languages, and in English. </li>
+				<li>To help further develop the Creativity, Compassion, Powers of Imagination and Reasoning, and Communication Skills of all concerned.</li>
+			</ul>
+
+		</div>
+		</div>
+	</div>
+	</section>
+
+
+	<section id="listing">
+	<div class="container">
+		<div class="row" >
+		<div class="col-md-12">
+			<h2> Listing on ISN </h2>
+			<p> The fee for a listing (with bio-data, description of storytelling-related services offered, etc) is Rs. 500 per year. For additional details, please e-mail to <a href="mailto:info@indianstorytellingnetwork.org">info@indianstorytellingnetwork.org</a>. </p>
+
+			<h3>E-mail Groups</h3>
+			<p>ISN does not yet have an e-mail announcement or discussion group of its own. To join (Chennai-based) World Storytelling Institute's e-mail announcement group, please e-mail to <a href="mailto:info@storytellinginstitue.org?subject=Join_Mailing_List_ISN">info@storytellinginstitue.org</a>. </p>
+
+			<p>To join (Bangalore-based) Kathalaya's e-mail announcement group, please e-mail to <a href="mailto:kathalaya@gmail.com?subject=Join_Mailing_List_ISN">kathalaya@gmail.com</a> </p>
+
+			<p> To join Storytell, a global discussion group about storytelling, please click <a href="http://www.storynet.org/storytell.html">here</a>.</p>
+
+			<p>All of these e-mail groups could be joined by anyone for no fee. </p>
+			
+			<h3> Upcoming Events </h3>
+			<p> <a href="http://www.storytellinginstitute.org/2.htm">Chennai Storytelling Festival 2014</a>, on 7-9 Feb. Three days of free storytelling-related workshops on the theme, Storytelling and Healing </p>
+
+		</div>	
+		</div>
+	</div>
+	</section>
+
+	<section id="contact">
+	<div class="container">
+		<div class="row" >
+		<div class="col-md-12">		
+			
+			<h2> Contact </h2>
+			
+			<div class="row">
+			<div class="col-md-6">				
+				<address>
+					<strong>Ms. Geeta Ramanujam </strong><br>
+					Kathalaya, Bangalore<br>
+					<a href="http://www.kathalaya.org/">www.kathalaya.org</a><br>
+					<i class="fa fa-phone"></i> 080 2668 9856<br>
+					<i class="fa fa-envelope-o"></i> <a href="mailto:kathalaya@gmail.com?subject=Indian_Storytelling_Network">kathalaya@gmail.com</a></br>
+				</address>
+			</div>
+
+			<div class="col-md-6">	
+				<address>
+					<strong>Dr. Eric Miller</strong><br>
+					World Storytelling Institute, Chennai<br>
+					<a href="http://www.storytellinginstitute.org/">www.storytellinginstitute.org</a><br>
+					<i class="fa fa-phone"></i> 98403 94282<br>
+					<i class="fa fa-envelope-o"></i> <a href="mailto:info@storytellinginstitute.org?subject=Indian_Storytelling_Network">info@storytellinginstitute.org</a><br>
+				</address>
+			</div>
+			</div>
+		</div>
+		</div>
+	</div>
+	</section>	
+
+	<footer> 
+		<div class="container">
+			<small>Designed by <a href="http://amitkaps.com">Amit Kapoor</a></small>
+		</div>	
+	</footer>	
+
+	<!-- Javascipt -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script src="main.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
